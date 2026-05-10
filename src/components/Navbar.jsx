@@ -74,11 +74,31 @@ export default function Navbar() {
 
       <div className="nav-right">
 
-        <div className="nav-icons">
-          <FaGithub />
-          <FaLinkedin />
-          <FaEnvelope />
-        </div>
+<div className="nav-icons">
+
+  <a
+    href="https://github.com/Ayat360"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaGithub />
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/aregbe-adekunle-7265b3361"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaLinkedin />
+  </a>
+
+  <a
+    href="mailto:aregbeadekunle@gmail.com"
+  >
+    <FaEnvelope />
+  </a>
+
+</div>
 
         <button
           className="menu-btn"

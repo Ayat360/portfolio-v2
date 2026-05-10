@@ -1,4 +1,5 @@
 import "./App.css";
+import AuroraBackground from "./components/AuroraBackground";
 
 import { useState, useEffect } from "react";
 
@@ -114,9 +115,9 @@ function App() {
 
       <CustomCursor />
 
-      {/* FOOTER */}
       <Footer />
 
+      <AuroraBackground />
     </div>
   );
 }

@@ -11,33 +11,39 @@ import project3 from "../assets/images/project3.jpg";
 
 const projects = [
   {
-    title: "Luxury Restaurant Website",
+    title: "Portfolio V2",
     image: project1,
     description:
-      "Premium restaurant experience with modern UI animations and responsive architecture.",
-    tech: ["React", "CSS", "Framer Motion"],
-    github: "#",
-    live: "#",
+      "An advanced developer portfolio showcasing modern UI engineering, smooth animations, and performance-focused architecture. Built to highlight projects, skills, and professional identity through a clean, interactive, and conversion-driven experience.",
+    tech: ["React", "Vite", "Framer Motion"],
+    github:
+      "https://github.com/Ayat360/portfolio-v2",
+    live:
+      "https://portfolio-v2-beryl-eight-50.vercel.app/",
   },
 
   {
-    title: "Modern Portfolio Experience",
+    title: "Slush Café Website",
     image: project2,
     description:
-      "Interactive frontend portfolio with glassmorphism and smooth transitions.",
-    tech: ["React", "Vite", "JavaScript"],
-    github: "#",
-    live: "#",
+      "A modern café experience platform designed to showcase a vibrant food and drinks brand with menu highlights, smooth navigation, and a visually rich interface that reflects a cozy, aesthetic dining atmosphere.",
+    tech: ["React", "CSS", "Framer Motion"],
+    github:
+      "https://github.com/Ayat360/Slush-cafe",
+    live:
+      "https://slush-cafe.vercel.app/",
   },
 
   {
-    title: "E-Commerce Platform",
+    title: "More Grace & Blessing Enterprise",
     image: project3,
     description:
-      "Clean scalable online store experience with conversion-focused UI design.",
+      "A structured business platform built to showcase household plastic products, enabling customers to browse and engage with a reliable supply brand focused on affordability, quality, and everyday utility.",
     tech: ["React", "Bootstrap", "API"],
-    github: "#",
-    live: "#",
+    github:
+      "https://github.com/Ayat360/More-Grace-Blessing-Nig.-Ent",
+    live:
+      "https://more-grace-blessing-nig-ent.vercel.app/",
   },
 ];
 
