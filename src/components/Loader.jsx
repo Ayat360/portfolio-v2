@@ -45,7 +45,7 @@ export default function Loader() {
             duration: 2,
           }}
         >
-          PROXIMA A3
+          AYAT360
         </motion.h1>
 
         <div className="loader-bar">

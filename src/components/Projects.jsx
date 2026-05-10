@@ -8,6 +8,7 @@ import {
 import project1 from "../assets/images/project1.jpg";
 import project2 from "../assets/images/project2.jpg";
 import project3 from "../assets/images/project3.jpg";
+import project4 from "../assets/images/project4.jpg";
 
 const projects = [
   {
@@ -44,6 +45,18 @@ const projects = [
       "https://github.com/Ayat360/More-Grace-Blessing-Nig.-Ent",
     live:
       "https://more-grace-blessing-nig-ent.vercel.app/",
+  },
+
+  {
+    title: "dammy-confectionery",
+    image: project4,
+    description:
+      "A modern café experience platform designed to showcase a vibrant food and drinks brand with menu highlights, smooth navigation, and a visually rich interface that reflects a cozy, aesthetic dining atmosphere.",
+    tech: ["React", "CSS", "Framer Motion"],
+    github:
+      "https://github.com/Ayat360/dammy-confectionery",
+    live:
+      "https://dammy-confectionery.vercel.app/",
   },
 ];
 
