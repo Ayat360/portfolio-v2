@@ -1,94 +1,161 @@
+import { useState } from "react";
+
 import ThemeToggle from "./ThemeToggle";
 
 import {
   FaGithub,
   FaLinkedin,
   FaEnvelope,
+  FaBars,
+  FaTimes,
 } from "react-icons/fa";
 
 export default function Navbar() {
+
+  const [menuOpen, setMenuOpen] =
+    useState(false);
 
   return (
 
     <header className="navbar">
 
-      <div className="nav-container">
+      {/* LOGO */}
 
-        {/* TOP ROW */}
+      <div className="logo">
+        &lt;/&gt; PROXIMA A3
+      </div>
 
-        <div className="nav-top">
+      {/* DESKTOP NAV */}
 
-          <div className="logo">
-            &lt;/&gt; PROXIMA A3
-          </div>
+      <nav className="desktop-nav">
 
-          <div className="nav-actions">
+        <a href="#home">
+          Home
+        </a>
 
-            <ThemeToggle />
+        <a href="#about">
+          About
+        </a>
 
-            <div className="nav-icons">
+        <a href="#skills">
+          Skills
+        </a>
 
-              <a
-                href="https://github.com/Ayat360"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub />
-              </a>
+        <a href="#projects">
+          Projects
+        </a>
 
-              <a
-                href="https://www.linkedin.com/in/aregbe-adekunle-7265b3361"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin />
-              </a>
+        <a href="#services">
+          Services
+        </a>
 
-              <a
-                href="mailto:aregbeadekunle@gmail.com"
-              >
-                <FaEnvelope />
-              </a>
+        <a href="#contact">
+          Contact
+        </a>
 
-            </div>
+      </nav>
 
-          </div>
+      {/* RIGHT SIDE */}
+
+      <div className="nav-right">
+
+        <ThemeToggle />
+
+        <div className="nav-icons">
+
+          <a
+            href="https://github.com/Ayat360"
+            target="_blank"
+          >
+            <FaGithub />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/aregbe-adekunle-7265b3361"
+            target="_blank"
+          >
+            <FaLinkedin />
+          </a>
+
+          <a
+            href="mailto:aregbeadekunle@gmail.com"
+          >
+            <FaEnvelope />
+          </a>
 
         </div>
 
-        {/* BOTTOM ROW */}
+        {/* MOBILE MENU BTN */}
 
-        <nav className="nav-links">
+        <button
+          className="menu-btn"
 
-          <a href="#home">
-            Home
-          </a>
+          onClick={() =>
+            setMenuOpen(!menuOpen)
+          }
+        >
 
-          <a href="#about">
-            About
-          </a>
+          {
+            menuOpen
+              ? <FaTimes />
+              : <FaBars />
+          }
 
-          <a href="#skills">
-            Skills
-          </a>
+        </button>
 
-          <a href="#projects">
-            Projects
-          </a>
+      </div>
 
-          <a href="#services">
-            Services
-          </a>
+      {/* MOBILE RADIAL MENU */}
 
-          <a href="#clients">
-            Clients
-          </a>
+      <div
+        className={
+          menuOpen
+            ? "mobile-wheel active"
+            : "mobile-wheel"
+        }
+      >
 
-          <a href="#contact">
-            Contact
-          </a>
+        <a
+          href="#home"
+          onClick={() => setMenuOpen(false)}
+        >
+          Home
+        </a>
 
-        </nav>
+        <a
+          href="#about"
+          onClick={() => setMenuOpen(false)}
+        >
+          About
+        </a>
+
+        <a
+          href="#skills"
+          onClick={() => setMenuOpen(false)}
+        >
+          Skills
+        </a>
+
+        <a
+          href="#projects"
+          onClick={() => setMenuOpen(false)}
+        >
+          Projects
+        </a>
+
+        <a
+          href="#services"
+          onClick={() => setMenuOpen(false)}
+        >
+          Services
+        </a>
+
+        <a
+          href="#contact"
+          onClick={() => setMenuOpen(false)}
+        >
+          Contact
+        </a>
 
       </div>
 
