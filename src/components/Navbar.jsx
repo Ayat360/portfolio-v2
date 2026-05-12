@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 import {
   FaGithub,
@@ -74,7 +75,9 @@ export default function Navbar() {
 
       <div className="nav-right">
 
-<div className="nav-icons">
+        <ThemeToggle />
+
+        <div className="nav-icons">
 
   <a
     href="https://github.com/Ayat360"

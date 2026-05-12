@@ -1,12 +1,33 @@
-import { FaMoon, FaSun } from "react-icons/fa";
+import {
+  useContext,
+} from "react";
 
-export default function ThemeToggle({ darkMode, setDarkMode }) {
+import {
+  FaMoon,
+  FaSun,
+} from "react-icons/fa";
+
+import {
+  ThemeContext,
+} from "../context/theme-context";
+
+export default function ThemeToggle() {
+
+  const {
+    theme,
+    toggleTheme,
+  } = useContext(ThemeContext);
+
   return (
     <button
       className="theme-toggle"
-      onClick={() => setDarkMode(!darkMode)}
+      onClick={toggleTheme}
     >
-      {darkMode ? <FaSun /> : <FaMoon />}
+      {
+        theme === "dark"
+          ? <FaSun />
+          : <FaMoon />
+      }
     </button>
   );
 }

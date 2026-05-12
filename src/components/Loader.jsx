@@ -1,72 +1,43 @@
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function Loader() {
 
+  const [loading, setLoading] =
+    useState(true);
+
+  useEffect(() => {
+
+    const timer = setTimeout(() => {
+
+      setLoading(false);
+
+    }, 2500);
+
+    return () => clearTimeout(timer);
+
+  }, []);
+
+  if (!loading) return null;
+
   return (
 
-    <motion.div
-      className="loader-screen"
+    <div className="loader">
 
-      initial={{ opacity: 1 }}
+      <div className="loader-content">
 
-      exit={{
-        opacity: 0,
-        transition: {
-          duration: 1,
-        },
-      }}
-    >
-
-      <motion.div
-        className="loader-content"
-
-        initial={{
-          scale: 0.8,
-          opacity: 0,
-        }}
-
-        animate={{
-          scale: 1,
-          opacity: 1,
-        }}
-
-        transition={{
-          duration: 1,
-        }}
-      >
-
-        <motion.h1
-          animate={{
-            opacity: [0.4, 1, 0.4],
-          }}
-
-          transition={{
-            repeat: Infinity,
-            duration: 2,
-          }}
-        >
-          AYAT360
-        </motion.h1>
+        <h1>
+          PROXIMA A3
+        </h1>
 
         <div className="loader-bar">
 
-          <motion.div
-            className="loader-progress"
-
-            initial={{ width: 0 }}
-
-            animate={{ width: "100%" }}
-
-            transition={{
-              duration: 2.5,
-              ease: "easeInOut",
-            }}
-          />
+          <span></span>
 
         </div>
 
-      </motion.div>
+      </div>
 
-    </motion.div>
+    </div>
+
   );
 }

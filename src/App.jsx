@@ -1,4 +1,5 @@
 import "./App.css";
+import { Helmet } from "react-helmet";
 import AuroraBackground from "./components/AuroraBackground";
 
 import { useState, useEffect } from "react";
@@ -72,6 +73,8 @@ function App() {
 
   return (
 
+    
+
     <div
       className={
         darkMode ? "app dark" : "app light"
@@ -95,10 +98,20 @@ function App() {
         setDarkMode={setDarkMode}
       />
 
-      {/* NAVBAR */}
-      <Navbar />
+ <Helmet>
+        SEO tags here
+      </Helmet>
 
-      {/* MAIN SECTIONS */}
+      <Loader />
+
+      <CustomCursor />
+
+      <AuroraBackground />
+
+      <div className="app-container"></div>
+      
+       <Navbar />
+
       <Hero />
 
       <About />
