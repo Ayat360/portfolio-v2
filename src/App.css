@@ -2024,7 +2024,10 @@ body[data-theme="light"] .hero-tag{
 
   align-items:center;
 
+  justify-content:flex-end;
   gap:12px;
+
+  margin-left:auto;
 }
 
 /* ICONS */
@@ -2151,6 +2154,14 @@ body[data-theme="light"] .hero-tag{
   .desktop-nav{
     display:none;
   }
+
+  .nav-right{
+  margin-left:auto;
+}
+
+.menu-btn{
+  margin-left:auto;
+}
 
   .nav-icons{
     display:none;
