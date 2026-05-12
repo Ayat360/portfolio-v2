@@ -26,7 +26,7 @@ export default function Loader() {
       <div className="loader-content">
 
         <h1>
-          PROXIMA A3
+          &lt;/&gt; AYAT360
         </h1>
 
         <div className="loader-bar">

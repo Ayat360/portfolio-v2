@@ -1,116 +1,94 @@
-import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 
 import {
   FaGithub,
   FaLinkedin,
   FaEnvelope,
-  FaBars,
-  FaTimes,
 } from "react-icons/fa";
 
 export default function Navbar() {
 
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
+
     <header className="navbar">
 
-      <div className="logo">
-        &lt;/&gt; PROXIMA A3
-      </div>
+      <div className="nav-container">
 
-      <nav className={menuOpen ? "nav-menu active" : "nav-menu"}>
+        {/* TOP ROW */}
 
-        <a
-          href="#home"
-          onClick={() => setMenuOpen(false)}
-        >
-          Home
-        </a>
+        <div className="nav-top">
 
-        <a
-          href="#about"
-          onClick={() => setMenuOpen(false)}
-        >
-          About
-        </a>
+          <div className="logo">
+            &lt;/&gt; PROXIMA A3
+          </div>
 
-        <a
-          href="#skills"
-          onClick={() => setMenuOpen(false)}
-        >
-          Skills
-        </a>
+          <div className="nav-actions">
 
-        <a
-          href="#projects"
-          onClick={() => setMenuOpen(false)}
-        >
-          Projects
-        </a>
+            <ThemeToggle />
 
-        <a
-          href="#services"
-          onClick={() => setMenuOpen(false)}
-        >
-          Services
-        </a>
+            <div className="nav-icons">
 
-        <a
-          href="#clients"
-          onClick={() => setMenuOpen(false)}
-        >
-          Clients
-        </a>
+              <a
+                href="https://github.com/Ayat360"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+              </a>
 
-        <a
-          href="#contact"
-          onClick={() => setMenuOpen(false)}
-        >
-          Contact
-        </a>
+              <a
+                href="https://www.linkedin.com/in/aregbe-adekunle-7265b3361"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin />
+              </a>
 
-      </nav>
+              <a
+                href="mailto:aregbeadekunle@gmail.com"
+              >
+                <FaEnvelope />
+              </a>
 
-      <div className="nav-right">
+            </div>
 
-        <ThemeToggle />
+          </div>
 
-        <div className="nav-icons">
+        </div>
 
-  <a
-    href="https://github.com/Ayat360"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <FaGithub />
-  </a>
+        {/* BOTTOM ROW */}
 
-  <a
-    href="https://www.linkedin.com/in/aregbe-adekunle-7265b3361"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <FaLinkedin />
-  </a>
+        <nav className="nav-links">
 
-  <a
-    href="mailto:aregbeadekunle@gmail.com"
-  >
-    <FaEnvelope />
-  </a>
+          <a href="#home">
+            Home
+          </a>
 
-</div>
+          <a href="#about">
+            About
+          </a>
 
-        <button
-          className="menu-btn"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
+          <a href="#skills">
+            Skills
+          </a>
 
-          {menuOpen ? <FaTimes /> : <FaBars />}
+          <a href="#projects">
+            Projects
+          </a>
 
-        </button>
+          <a href="#services">
+            Services
+          </a>
+
+          <a href="#clients">
+            Clients
+          </a>
+
+          <a href="#contact">
+            Contact
+          </a>
+
+        </nav>
 
       </div>
 
