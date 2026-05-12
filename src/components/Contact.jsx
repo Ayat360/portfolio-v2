@@ -91,17 +91,23 @@ export default function Contact() {
 
           </div>
 
-          <form className="contact-form">
+          <form
+            className="contact-form"
+            action="https://formspree.io/f/mkgobkra"
+            method="POST"
+          >
 
             <div className="input-group">
 
               <input
                 type="text"
+                name="name"
                 placeholder="Your Name"
               />
 
               <input
                 type="email"
+                name="email"
                 placeholder="Your Email"
               />
 
@@ -109,11 +115,13 @@ export default function Contact() {
 
             <input
               type="text"
+              name="subject"
               placeholder="Subject"
             />
 
             <textarea
               rows="6"
+              name="message"
               placeholder="Tell me about your project..."
             ></textarea>
 
