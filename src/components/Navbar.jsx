@@ -22,7 +22,7 @@ export default function Navbar() {
       {/* LOGO */}
 
       <div className="logo">
-        &lt;/&gt; PROXIMA A3
+        &lt;/&gt; AYAT360
       </div>
 
       {/* DESKTOP NAV */}
