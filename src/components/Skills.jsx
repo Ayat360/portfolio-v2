@@ -1,98 +1,79 @@
 import Reveal from "./Reveal";
 
 const skills = [
+
   {
-    title: "Frontend Development",
-    level: "95%",
+    title: "Frontend",
+    items: ["React", "JavaScript", "HTML", "CSS", "Tailwind"]
   },
 
   {
-    title: "React & Vite",
-    level: "92%",
+    title: "UI/UX",
+    items: ["Figma", "Design Systems", "Responsive Design"]
   },
 
   {
-    title: "UI/UX Design",
-    level: "90%",
-  },
+    title: "Tools",
+    items: ["Git", "Vite", "VS Code", "API Integration"]
+  }
 
-  {
-    title: "Responsive Design",
-    level: "96%",
-  },
-
-  {
-    title: "JavaScript",
-    level: "88%",
-  },
-
-  {
-    title: "Animations & Interactions",
-    level: "93%",
-  },
 ];
 
 export default function Skills() {
 
   return (
 
-    <Reveal>
+    <section className="skills" id="skills">
 
-      <section
-        className="skills section-card"
-        id="skills"
-      >
+      <div className="skills-container">
 
-        <div className="section-title">
+        <div className="skills-header">
+
+          <span className="section-tag">
+            Skills
+          </span>
 
           <h2>
-            Technical Expertise
+            Technologies and tools I use
+            to build modern products.
           </h2>
-
-          <p>
-            Combining creativity and engineering
-            to build immersive digital experiences.
-          </p>
 
         </div>
 
         <div className="skills-grid">
 
-          {skills.map((skill, index) => (
+          {skills.map((group, index) => (
 
-            <div
-              className="skill-item"
-              key={index}
-            >
+            <Reveal key={index}>
 
-              <div className="skill-header">
+              <div className="skill-card">
 
-                <h3>{skill.title}</h3>
+                <h3>{group.title}</h3>
 
-                <span>{skill.level}</span>
+                <div className="skill-tags">
 
-              </div>
+                  {group.items.map((item, i) => (
 
-              <div className="skill-bar">
+                    <span key={i}>
+                      {item}
+                    </span>
 
-                <div
-                  className="skill-progress"
-                  style={{
-                    width: skill.level,
-                  }}
-                />
+                  ))}
+
+                </div>
 
               </div>
 
-            </div>
+            </Reveal>
 
           ))}
 
         </div>
 
-      </section>
+      </div>
 
-    </Reveal>
+    </section>
 
   );
+
 }

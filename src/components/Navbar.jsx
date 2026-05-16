@@ -3,9 +3,6 @@ import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 
 import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
   FaBars,
   FaTimes,
 } from "react-icons/fa";
@@ -22,7 +19,7 @@ export default function Navbar() {
       {/* LOGO */}
 
       <div className="logo">
-        &lt;/&gt; AYAT360
+        PROXIMA A3
       </div>
 
       {/* DESKTOP NAV */}
@@ -35,10 +32,6 @@ export default function Navbar() {
 
         <a href="#about">
           About
-        </a>
-
-        <a href="#skills">
-          Skills
         </a>
 
         <a href="#projects">
@@ -55,37 +48,11 @@ export default function Navbar() {
 
       </nav>
 
-      {/* RIGHT SIDE */}
+      {/* RIGHT */}
 
       <div className="nav-right">
 
         <ThemeToggle />
-
-        <div className="nav-icons">
-
-          <a
-            href="https://github.com/Ayat360"
-            target="_blank"
-          >
-            <FaGithub />
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/aregbe-adekunle-7265b3361"
-            target="_blank"
-          >
-            <FaLinkedin />
-          </a>
-
-          <a
-            href="mailto:aregbeadekunle@gmail.com"
-          >
-            <FaEnvelope />
-          </a>
-
-        </div>
-
-        {/* MOBILE MENU BTN */}
 
         <button
           className="menu-btn"
@@ -105,13 +72,13 @@ export default function Navbar() {
 
       </div>
 
-      {/* MOBILE RADIAL MENU */}
+      {/* MOBILE MENU */}
 
       <div
         className={
           menuOpen
-            ? "mobile-wheel active"
-            : "mobile-wheel"
+            ? "mobile-menu active"
+            : "mobile-menu"
         }
       >
 
@@ -127,13 +94,6 @@ export default function Navbar() {
           onClick={() => setMenuOpen(false)}
         >
           About
-        </a>
-
-        <a
-          href="#skills"
-          onClick={() => setMenuOpen(false)}
-        >
-          Skills
         </a>
 
         <a

@@ -1,9 +1,11 @@
 import {
   FaGithub,
   FaLinkedin,
-  FaInstagram,
-  FaTwitter,
+  FaEnvelope,
 } from "react-icons/fa";
+
+import footerBg from
+"../assets/images/footer-bg.jpg";
 
 export default function Footer() {
 
@@ -11,49 +13,45 @@ export default function Footer() {
 
     <footer className="footer">
 
-      <div className="footer-top">
+      {/* BACKGROUND */}
 
-        <div className="footer-brand">
+      <img
+        src={footerBg}
+        alt="Footer Background"
 
-          <h2>
-            PROXIMA A3
-          </h2>
+        className="footer-bg"
+      />
 
-          <p>
-            Crafting immersive digital experiences
-            with modern frontend engineering,
-            premium UI/UX, and creative development.
-          </p>
+      {/* OVERLAY */}
 
-          <div className="footer-socials">
+      <div className="footer-overlay"></div>
 
-            <a href="#">
-              <FaGithub />
-            </a>
+      {/* CONTENT */}
 
-            <a href="#">
-              <FaLinkedin />
-            </a>
+      <div className="footer-content">
 
-            <a href="#">
-              <FaInstagram />
-            </a>
+        <div className="footer-top">
 
-            <a href="#">
-              <FaTwitter />
-            </a>
+          {/* LEFT */}
+
+          <div className="footer-brand">
+
+            <h2>
+              PROXIMA A3
+            </h2>
+
+            <p>
+              Frontend developer focused
+              on building clean,
+              responsive, and modern
+              digital experiences.
+            </p>
 
           </div>
 
-        </div>
+          {/* CENTER */}
 
-        <div className="footer-links">
-
-          <div>
-
-            <h3>
-              Navigation
-            </h3>
+          <div className="footer-links">
 
             <a href="#home">
               Home
@@ -67,70 +65,57 @@ export default function Footer() {
               Projects
             </a>
 
+            <a href="#services">
+              Services
+            </a>
+
             <a href="#contact">
               Contact
             </a>
 
           </div>
 
-          <div>
+          {/* RIGHT */}
 
-            <h3>
-              Services
-            </h3>
+          <div className="footer-socials">
 
-            <a href="#">
-              Web Development
+            <a
+              href="https://github.com/Ayat360"
+              target="_blank"
+            >
+              <FaGithub />
             </a>
 
-            <a href="#">
-              UI/UX Design
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+            >
+              <FaLinkedin />
             </a>
 
-            <a href="#">
-              Branding
+            <a
+              href="mailto:aregbeadekunle@gmail.com"
+            >
+              <FaEnvelope />
             </a>
-
-            <a href="#">
-              Consulting
-            </a>
-
-          </div>
-
-          <div>
-
-            <h3>
-              Contact
-            </h3>
-
-            <p>
-              Lagos, Nigeria
-            </p>
-
-            <p>
-              aregbeadekunle@gmail.com
-            </p>
-
-            <p>
-              07082798562
-            </p>
 
           </div>
 
         </div>
 
-      </div>
+        {/* BOTTOM */}
 
-      <div className="footer-bottom">
+        <div className="footer-bottom">
 
-        <p>
-          © 2026 PROXIMA A3.
-          All Rights Reserved.
-        </p>
+          <p>
+            © 2026 PROXIMA A3.
+            All rights reserved.
+          </p>
+
+        </div>
 
       </div>
 
     </footer>
-
   );
 }

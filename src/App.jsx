@@ -10,13 +10,11 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Services from "./components/Services";
-import Clients from "./components/Clients";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import CursorGlow from "./components/CursorGlow";
 import ThemeToggle from "./components/ThemeToggle";
 import Loader from "./components/Loader";
-import CustomCursor from "./components/CustomCursor";
+import Impact from "./components/Impact";
 
 function App() {
 
@@ -89,9 +87,6 @@ function App() {
         }}
       />
 
-      {/* CURSOR GLOW */}
-      <CursorGlow />
-
       {/* THEME TOGGLE */}
       <ThemeToggle
         darkMode={darkMode}
@@ -103,8 +98,6 @@ function App() {
       </Helmet>
 
       <Loader />
-
-      <CustomCursor />
 
       <AuroraBackground />
 
@@ -122,11 +115,9 @@ function App() {
 
       <Services />
 
-      <Clients />
+      <Impact />
 
       <Contact />
-
-      <CustomCursor />
 
       <Footer />
 

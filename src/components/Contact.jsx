@@ -2,127 +2,108 @@ import Reveal from "./Reveal";
 
 import {
   FaEnvelope,
-  FaPhoneAlt,
   FaMapMarkerAlt,
+  FaGithub,
+  FaLinkedin,
 } from "react-icons/fa";
 
 export default function Contact() {
 
   return (
 
-    <Reveal>
+    <section
+      className="contact"
+      id="contact"
+    >
 
-      <section
-        className="contact section-card"
-        id="contact"
-      >
+      <div className="contact-container">
 
-        <div className="section-title">
+        {/* LEFT */}
 
-          <h2>
-            Let’s Build Something Amazing
-          </h2>
-
-          <p>
-            Ready to bring your vision to life?
-            Let’s create modern digital experiences
-            together.
-          </p>
-
-        </div>
-
-        <div className="contact-container">
+        <Reveal>
 
           <div className="contact-info">
 
-            <div className="contact-card">
+            <span className="section-tag">
+              Contact
+            </span>
 
-              <div className="contact-icon">
+            <h2>
+              Let’s build something
+              great together.
+            </h2>
+
+            <p>
+              Open to freelance projects,
+              collaborations, and frontend
+              development opportunities.
+            </p>
+
+            <div className="contact-details">
+
+              <div className="contact-item">
+
                 <FaEnvelope />
-              </div>
 
-              <div>
-
-                <h3>Email</h3>
-
-                <p>
+                <span>
                   aregbeadekunle@gmail.com
-                </p>
+                </span>
 
               </div>
 
-            </div>
+              <div className="contact-item">
 
-            <div className="contact-card">
-
-              <div className="contact-icon">
-                <FaPhoneAlt />
-              </div>
-
-              <div>
-
-                <h3>Phone</h3>
-
-                <p>
-                  07082798562
-                </p>
-
-              </div>
-
-            </div>
-
-            <div className="contact-card">
-
-              <div className="contact-icon">
                 <FaMapMarkerAlt />
-              </div>
 
-              <div>
-
-                <h3>Location</h3>
-
-                <p>
+                <span>
                   Lagos, Nigeria
-                </p>
+                </span>
 
               </div>
+
+            </div>
+
+            <div className="contact-socials">
+
+              <a
+                href="https://github.com/Ayat360"
+                target="_blank"
+              >
+                <FaGithub />
+              </a>
+
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+              >
+                <FaLinkedin />
+              </a>
 
             </div>
 
           </div>
 
-          <form
-            className="contact-form"
-            action="https://formspree.io/f/mkgobkra"
-            method="POST"
-          >
+        </Reveal>
 
-            <div className="input-group">
+        {/* RIGHT */}
 
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-              />
+        <Reveal>
 
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-              />
-
-            </div>
+          <form className="contact-form">
 
             <input
               type="text"
-              name="subject"
-              placeholder="Subject"
+              placeholder="Your Name"
+            />
+
+            <input
+              type="email"
+              placeholder="Email Address"
             />
 
             <textarea
+              placeholder="Your Message"
               rows="6"
-              name="message"
-              placeholder="Tell me about your project..."
             ></textarea>
 
             <button type="submit">
@@ -131,11 +112,10 @@ export default function Contact() {
 
           </form>
 
-        </div>
+        </Reveal>
 
-      </section>
+      </div>
 
-    </Reveal>
-
+    </section>
   );
 }

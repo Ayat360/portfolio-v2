@@ -1,117 +1,96 @@
 import Reveal from "./Reveal";
 
 import {
-  FaCode,
-  FaPalette,
-  FaRocket,
-  FaMobileAlt,
-  FaShoppingCart,
   FaLaptopCode,
+  FaMobileAlt,
+  FaPaintBrush,
 } from "react-icons/fa";
 
 const services = [
+
   {
-    icon: <FaCode />,
+    icon: <FaLaptopCode />,
     title: "Frontend Development",
     description:
-      "Building fast, scalable, and modern React applications with clean architecture.",
+      "Building scalable and responsive web applications using modern React architecture and clean code practices.",
   },
 
   {
-    icon: <FaPalette />,
-    title: "UI/UX Design",
+    icon: <FaPaintBrush />,
+    title: "UI Design Implementation",
     description:
-      "Designing immersive interfaces focused on usability and premium visual experiences.",
-  },
-
-  {
-    icon: <FaRocket />,
-    title: "Performance Optimization",
-    description:
-      "Optimizing websites for speed, SEO, responsiveness, and smooth interactions.",
+      "Translating UI designs into pixel-perfect interfaces with strong attention to detail and usability.",
   },
 
   {
     icon: <FaMobileAlt />,
-    title: "Responsive Websites",
+    title: "Responsive Web Design",
     description:
-      "Creating pixel-perfect experiences across desktop, tablet, and mobile devices.",
+      "Ensuring seamless user experience across all devices with fully responsive and adaptive layouts.",
   },
 
-  {
-    icon: <FaShoppingCart />,
-    title: "E-Commerce Solutions",
-    description:
-      "Developing conversion-focused online stores with premium user experience.",
-  },
-
-  {
-    icon: <FaLaptopCode />,
-    title: "Portfolio & Business Sites",
-    description:
-      "Building premium digital identities for brands, startups, and creatives.",
-  },
 ];
 
 export default function Services() {
 
   return (
 
-    <Reveal>
+    <section className="services" id="services">
 
-      <section
-        className="services section-card"
-        id="services"
-      >
+      <div className="services-container">
 
-        <div className="section-title">
+        <Reveal>
 
-          <h2>
-            Services I Provide
-          </h2>
+          <div className="services-header">
 
-          <p>
-            Premium digital solutions crafted
-            with modern technologies and
-            creative frontend engineering.
-          </p>
+            <span className="section-tag">
+              Services
+            </span>
 
-        </div>
+            <h2>
+              What I do to help
+              businesses grow online
+            </h2>
+
+            <p>
+              Focused on building clean,
+              functional and scalable
+              frontend experiences that
+              deliver real value.
+            </p>
+
+          </div>
+
+        </Reveal>
 
         <div className="services-grid">
 
-          {services.map((service, index) => (
+          {services.map((item, index) => (
 
-            <div
-              className="service-card"
-              key={index}
-            >
+            <Reveal key={index}>
 
-              <div className="service-icon">
-                {service.icon}
+              <div className="service-card">
+
+                <div className="service-icon">
+                  {item.icon}
+                </div>
+
+                <h3>{item.title}</h3>
+
+                <p>{item.description}</p>
+
               </div>
 
-              <h3>
-                {service.title}
-              </h3>
-
-              <p>
-                {service.description}
-              </p>
-
-              <button className="service-btn">
-                Learn More
-              </button>
-
-            </div>
+            </Reveal>
 
           ))}
 
         </div>
 
-      </section>
+      </div>
 
-    </Reveal>
+    </section>
 
   );
+
 }
