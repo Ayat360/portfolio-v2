@@ -12,13 +12,12 @@ import Projects from "./components/Projects";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import ThemeToggle from "./components/ThemeToggle";
 import Loader from "./components/Loader";
 import Impact from "./components/Impact";
 
 function App() {
 
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode] = useState(true);
 
   const [scrollProgress, setScrollProgress] =
     useState(0);
@@ -85,12 +84,6 @@ function App() {
         style={{
           width: `${scrollProgress}%`,
         }}
-      />
-
-      {/* THEME TOGGLE */}
-      <ThemeToggle
-        darkMode={darkMode}
-        setDarkMode={setDarkMode}
       />
 
  <Helmet>

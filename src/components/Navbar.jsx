@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-import ThemeToggle from "./ThemeToggle";
-
 import {
   FaBars,
   FaTimes,
@@ -52,7 +50,7 @@ export default function Navbar() {
 
       <div className="nav-right">
 
-        <ThemeToggle />
+
 
         <button
           className="menu-btn"
